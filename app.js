@@ -18,6 +18,10 @@ app.post("/login", (req, res) => {
     }
 });
 
+app.get("/login", (req, res) => {
+    res.redirect("/");
+});
+
 app.get("/", (req, res) => {
     res.sendFile(path.resolve("./public/index.html"));
 });
